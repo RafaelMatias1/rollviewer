@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSGO Roll Viewer — Extensão para Criadores de Conteúdo</title>
+  <meta name="description" content="A extensão que todo criador de conteúdo de CS precisa. Visualize seus rolls em tempo real no csgo-skins.com." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <!-- Lucide Icons (SVG icon library, zero emojis) -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <div class="logo">
+        <span class="logo-icon"><i data-lucide="crosshair"></i></span>
+        <span class="logo-text">CSGO Roll Viewer</span>
+      </div>
+      <nav class="nav-links">
+        <a href="#features">Funcionalidades</a>
+        <a href="#pricing">Planos</a>
+        <a href="#portfolio">Portfólio</a>
+        <a href="#security">Segurança</a>
+        <a href="#contact" class="btn btn-primary nav-cta">Contratar</a>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Menu">&#9776;</button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#features">Funcionalidades</a>
+      <a href="#pricing">Planos</a>
+      <a href="#portfolio">Portfólio</a>
+      <a href="#security">Segurança</a>
+      <a href="#contact">Contratar</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg-grid"></div>
+    <div class="container hero-content">
+      <div class="hero-badge"><i data-lucide="lock" style="width:13px;height:13px;vertical-align:middle;margin-right:6px;"></i> Exclusivo para csgo-skins.com</div>
+      <h1 class="hero-title">
+        A extensão que todo<br />
+        <span class="gradient-text">criador de conteúdo</span><br />
+        de CS precisa.
+      </h1>
+      <p class="hero-subtitle">
+        Visualize seus rolls em tempo real, com histórico, barra de progresso e muito mais —
+        direto no <strong>csgo-skins.com</strong>. Personalizada com as cores e identidade do seu canal.
+      </p>
+      <div class="hero-actions">
+        <a href="#pricing" class="btn btn-primary btn-lg">Ver planos e preços</a>
+        <a href="#features" class="btn btn-ghost btn-lg">Ver funcionalidades</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-value">Chrome</span>
+          <span class="stat-label">Verificado Google</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-value">0</span>
+          <span class="stat-label">Dados coletados</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-value">1</span>
+          <span class="stat-label">Cliente ativo</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="section features" id="features">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Funcionalidades</span>
+        <h2 class="section-title">Tudo que você precisa<br />numa única extensão</h2>
+        <p class="section-subtitle">Desenvolvida pensando em transparência, automação e experiência do criador.</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card feature-card--highlight">
+          <div class="feature-icon"><i data-lucide="zap"></i></div>
+          <h3>Roll em Tempo Real</h3>
+          <p>Exibe o número do roll imediatamente após cada upgrade ou abertura de caixa, sem delay.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i data-lucide="clock"></i></div>
+          <h3>Histórico de Rolls</h3>
+          <p>Histórico dos últimos 10 rolls com origem identificada (caixa, atualizador e outros).</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i data-lucide="grid-2x2"></i></div>
+          <h3>Grade Visual 2×9</h3>
+          <p>Grade com os 18 últimos rolls do atualizador, organizados em 2 linhas de 9 para fácil leitura.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i data-lucide="bar-chart-2"></i></div>
+          <h3>Barra de Progresso</h3>
+          <p>Visualize onde o roll caiu dentro da escala de 0 a 100.000 com barra colorida.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i data-lucide="trophy"></i></div>
+          <h3>Zona de Vitória</h3>
+          <p>Destaque colorido automático com base na sua porcentagem de chance configurada.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i data-lucide="percent"></i></div>
+          <h3>Botões de % Rápidos</h3>
+          <p>Configure rapidamente as chances com botões pré-definidos: 3%, 7%, 15%, 30% e 75%.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i data-lucide="refresh-cw"></i></div>
+          <h3>Auto-restock</h3>
+          <p>Seleciona automaticamente a skin mais barata após uma derrota, otimizando o fluxo de conteúdo.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i data-lucide="tag"></i></div>
+          <h3>Badge no Inventário</h3>
+          <p>Badge de roll em cada item do inventário, com borda verde destacando os itens ganhos.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i data-lucide="paintbrush"></i></div>
+          <h3>Totalmente Personalizada</h3>
+          <p>Cores, nome, ícones e identidade visual do seu canal integrados na extensão.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOR WHO -->
+  <section class="section for-who">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Para quem é</span>
+        <h2 class="section-title">Feita para criadores<br />que querem se destacar</h2>
+      </div>
+      <ul class="for-who-list for-who-list--centered">
+        <li>
+          <span class="check-icon"><i data-lucide="check-circle-2"></i></span>
+          <div>
+            <strong>Criadores de conteúdo</strong>
+            <p>Streamers e Youtubers que fazem upgrades no csgo-skins.com e querem uma apresentação profissional.</p>
+          </div>
+        </li>
+        <li>
+          <span class="check-icon"><i data-lucide="check-circle-2"></i></span>
+          <div>
+            <strong>Transparência com a audiência</strong>
+            <p>Mostre o Provably Fair em tempo real, gerando confiança e engajamento com seu público.</p>
+          </div>
+        </li>
+        <li>
+          <span class="check-icon"><i data-lucide="check-circle-2"></i></span>
+          <div>
+            <strong>Quem quer automatizar</strong>
+            <p>Reduza o trabalho manual com auto-restock e foque no que importa: criar conteúdo.</p>
+          </div>
+        </li>
+      </ul>
+      <!-- CAROUSEL -->
+      <div class="carousel" id="carousel">
+        <div class="carousel-track" id="carouselTrack">
+          <div class="carousel-slide">
+            <img src="screenshot-1.png" alt="CSGO Roll Viewer — histórico de rolls" loading="lazy" />
+          </div>
+          <div class="carousel-slide">
+            <img src="screenshot-2.png" alt="CSGO Roll Viewer — atualizador com rolls" loading="lazy" />
+          </div>
+          <div class="carousel-slide">
+            <img src="screenshot-3.png" alt="CSGO Roll Viewer — grade de rolls e barra de progresso" loading="lazy" />
+          </div>
+          <div class="carousel-slide">
+            <img src="screenshot-4.png" alt="CSGO Roll Viewer — criadores parceiros" loading="lazy" />
+          </div>
+          <div class="carousel-slide">
+            <img src="screenshot-5.png" alt="CSGO Roll Viewer — badge no inventário" loading="lazy" />
+          </div>
+          <div class="carousel-slide">
+            <img src="screenshot-6.png" alt="CSGO Roll Viewer — abertura de caixas" loading="lazy" />
+          </div>
+        </div>
+
+        <button class="carousel-btn carousel-btn--prev" id="carouselPrev" aria-label="Anterior">
+          <i data-lucide="chevron-left"></i>
+        </button>
+        <button class="carousel-btn carousel-btn--next" id="carouselNext" aria-label="Próximo">
+          <i data-lucide="chevron-right"></i>
+        </button>
+
+        <div class="carousel-dots" id="carouselDots"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="section pricing" id="pricing">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Planos e Preços</span>
+        <h2 class="section-title">Escolha o plano<br />ideal para seu canal</h2>
+        <p class="section-subtitle">Escolha o plano que melhor se encaixa no seu canal. Todos incluem personalização visual completa.</p>
+      </div>
+      <div class="pricing-grid">
+
+        <div class="pricing-card">
+          <div class="pricing-card-header">
+            <span class="plan-name">Padrão</span>
+            <div class="plan-price">
+              <span class="price-value">R$ 200</span>
+              <span class="price-period">/mês</span>
+            </div>
+            <p class="plan-desc">Ideal para streamers e youtubers em crescimento.</p>
+          </div>
+          <ul class="plan-features">
+            <li><span><i data-lucide="check"></i></span> Extensão completa e funcional</li>
+            <li><span><i data-lucide="check"></i></span> Personalização visual inicial</li>
+            <li><span><i data-lucide="check"></i></span> Atualizações de correção</li>
+            <li><span><i data-lucide="check"></i></span> Suporte via mensagem</li>
+          </ul>
+          <a href="#contact" class="btn btn-outline btn-block">Contratar Padrão</a>
+        </div>
+
+        <div class="pricing-card pricing-card--featured">
+          <div class="pricing-badge">Mais popular</div>
+          <div class="pricing-card-header">
+            <span class="plan-name">Plus</span>
+            <div class="plan-price">
+              <span class="price-value">R$ 350</span>
+              <span class="price-period">/mês</span>
+            </div>
+            <p class="plan-desc">Ideal para canais com audiência consolidada (10k+ inscritos).</p>
+          </div>
+          <ul class="plan-features">
+            <li><span><i data-lucide="check"></i></span> Tudo do Padrão</li>
+            <li><span><i data-lucide="check"></i></span> Até 3 personalizações/mês</li>
+            <li><span><i data-lucide="check"></i></span> Suporte prioritário</li>
+            <li><span><i data-lucide="check"></i></span> Atualizações de novos recursos</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary btn-block">Contratar Plus</a>
+        </div>
+
+        <div class="pricing-card">
+          <div class="pricing-card-header">
+            <span class="plan-name">Premium</span>
+            <div class="plan-price">
+              <span class="price-value">R$ 500</span>
+              <span class="price-period">/mês</span>
+            </div>
+            <p class="plan-desc">Ideal para grandes criadores e canais parceiros de sites.</p>
+          </div>
+          <ul class="plan-features">
+            <li><span><i data-lucide="check"></i></span> Tudo do Plus</li>
+            <li><span><i data-lucide="check"></i></span> Adaptação para outros sites de skin</li>
+            <li><span><i data-lucide="check"></i></span> Funcionalidades exclusivas sob demanda</li>
+            <li><span><i data-lucide="check"></i></span> Atendimento dedicado</li>
+          </ul>
+          <a href="#contact" class="btn btn-outline btn-block">Contratar Premium</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section class="section portfolio" id="portfolio">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Portfólio</span>
+        <h2 class="section-title">Quem já usa o<br />CSGO Roll Viewer</h2>
+        <p class="section-subtitle">Acompanhe quem já está usando a extensão em seu canal.</p>
+      </div>
+      <div class="portfolio-grid">
+        <div class="portfolio-card">
+          <div class="portfolio-avatar">
+            <img src="gordao.jpeg" alt="GordaoDAORA" class="avatar-img" />
+          </div>
+          <div class="portfolio-info">
+            <span class="portfolio-badge">Cliente ativo</span>
+            <h3 class="portfolio-name">GordaoDAORA</h3>
+            <p class="portfolio-plan">Plano Padrão</p>
+            <p class="portfolio-desc">
+              Criador de conteúdo no YouTube com foco em upgrades e aberturas de caixas no csgo-skins.com.
+              Utiliza a extensão para exibir rolls em tempo real e aumentar a credibilidade com sua audiência.
+            </p>
+          </div>
+        </div>
+        <div class="portfolio-card portfolio-card--open">
+          <div class="portfolio-avatar">
+            <div class="avatar-placeholder muted"><i data-lucide="user-plus"></i></div>
+          </div>
+          <div class="portfolio-info">
+            <span class="portfolio-badge open">Vaga aberta</span>
+            <h3 class="portfolio-name">Poderia ser você</h3>
+            <p class="portfolio-plan">Qualquer plano</p>
+            <p class="portfolio-desc">
+              Se você cria conteúdo no csgo-skins.com e quer se destacar com uma ferramenta exclusiva,
+              entre em contato e seja o próximo case de sucesso.
+            </p>
+            <a href="#contact" class="btn btn-primary" style="margin-top:1rem;">Quero fazer parte</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECURITY -->
+  <section class="section security" id="security">
+    <div class="container">
+      <div class="security-inner">
+        <div class="security-icon-wrap">
+          <div class="security-icon-bg"><i data-lucide="shield-check"></i></div>
+        </div>
+        <div class="security-text">
+          <span class="section-tag">Segurança & Privacidade</span>
+          <h2 class="section-title">Verificada pelo Google.<br />Seus dados protegidos.</h2>
+          <p>A extensão passou pela revisão oficial da Chrome Web Store e cumpre integralmente as <strong>Políticas do Programa para Desenvolvedores</strong> do Google.</p>
+          <ul class="security-list">
+            <li><span><i data-lucide="shield"></i></span> Não coleta dados pessoais, senhas ou informações financeiras</li>
+            <li><span><i data-lucide="shield"></i></span> Não envia nada para servidores externos</li>
+            <li><span><i data-lucide="shield"></i></span> Não vende nem transfere dados a terceiros</li>
+            <li><span><i data-lucide="shield"></i></span> Lê apenas o conteúdo da página do csgo-skins.com (necessário para exibir o roll)</li>
+            <li><span><i data-lucide="shield"></i></span> Funciona exclusivamente no csgo-skins.com</li>
+          </ul>
+          <div class="security-disclosure">
+            <div class="disclosure-header">
+              <i data-lucide="file-check-2"></i>
+              <strong>Divulgação oficial — Chrome Web Store</strong>
+            </div>
+            <p>Conforme declarado publicamente na página da extensão no Google, os únicos dados acessados são <em>conteúdo do site</em> (textos e elementos da página), usados exclusivamente para exibir o número do roll. Nenhuma das três divulgações obrigatórias do Google é violada.</p>
+          </div>
+          <a href="https://github.com/RafaelMatias1" target="_blank" rel="noopener" class="btn btn-outline" style="margin-top:1.5rem;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;margin-right:8px;"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            Ver perfil do desenvolvedor no GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW TO INSTALL -->
+  <section class="section how-to" id="install">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Como funciona o acesso</span>
+        <h2 class="section-title">Simples de instalar,<br />fácil de gerenciar</h2>
+        <p class="section-subtitle">A extensão fica disponível na Chrome Web Store. Você instala em segundos e o acesso é mantido enquanto a assinatura estiver ativa.</p>
+      </div>
+      <div class="steps-grid">
+        <div class="step">
+          <div class="step-number">01</div>
+          <h4>Contrate um plano</h4>
+          <p>Entre em contato, escolha seu plano e efetue o pagamento da mensalidade.</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step">
+          <div class="step-number">02</div>
+          <h4>Receba o link</h4>
+          <p>Você recebe o link direto da Chrome Web Store para instalar a extensão no seu Chrome.</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step">
+          <div class="step-number">03</div>
+          <h4>Instale com 1 clique</h4>
+          <p>Clique em "Adicionar ao Chrome" e a extensão já aparece na sua barra, pronta para usar.</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step">
+          <div class="step-number">04</div>
+          <h4>Acesso ativo</h4>
+          <p>Enquanto a assinatura estiver em dia, a extensão funciona normalmente. Sem renovação, o acesso é removido.</p>
+        </div>
+      </div>
+      <div class="install-note">
+        <i data-lucide="info"></i>
+        <span>O acesso é gerenciado diretamente pelo desenvolvedor. Não é necessário configurar nada manualmente — tudo funciona pela Chrome Web Store.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT / CTA -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="contact-inner">
+        <div class="contact-text">
+          <span class="section-tag">Contato</span>
+          <h2 class="section-title">Pronto para elevar<br />seu conteúdo?</h2>
+          <p>Entre em contato para contratar, tirar dúvidas ou solicitar uma demonstração personalizada.</p>
+          <div class="contact-links">
+            <a href="https://github.com/RafaelMatias1" target="_blank" rel="noopener" class="contact-link">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              <span>github.com/RafaelMatias1</span>
+            </a>
+            <a href="mailto:rafamatiasschmidt@gmail.com" class="contact-link">
+              <i data-lucide="mail" style="width:22px;height:22px;flex-shrink:0;"></i>
+              <span>rafamatiasschmidt@gmail.com</span>
+            </a>
+          </div>
+        </div>
+        <div class="contact-card">
+          <div class="contact-card-inner">
+            <div class="contact-card-icon"><i data-lucide="rocket"></i></div>
+            <h3>Comece agora</h3>
+            <p>Assine mensalmente e tenha acesso completo à extensão enquanto sua assinatura estiver ativa.</p>
+            <div class="contact-steps-mini">
+              <div class="mini-step"><span>1.</span> Entre em contato via GitHub</div>
+              <div class="mini-step"><span>2.</span> Escolha seu plano e pague a mensalidade</div>
+              <div class="mini-step"><span>3.</span> Receba o link e instale direto da Chrome Web Store</div>
+            </div>
+            <a href="https://github.com/RafaelMatias1" target="_blank" rel="noopener" class="btn btn-primary btn-block" style="margin-top:1.5rem;">
+              Entrar em contato via GitHub
+            </a>
+            <a href="mailto:rafamatiasschmidt@gmail.com" class="btn btn-outline btn-block" style="margin-top:0.75rem;">
+              <i data-lucide="mail" style="width:18px;height:18px;margin-right:0.5rem;vertical-align:middle;"></i>
+              rafamatiasschmidt@gmail.com
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-logo">
+        <span class="logo-icon"><i data-lucide="crosshair"></i></span>
+        <span class="logo-text">CSGO Roll Viewer</span>
+      </div>
+      <p class="footer-copy">© 2026 CSGO Roll Viewer. Desenvolvido por <a href="https://github.com/RafaelMatias1" target="_blank" rel="noopener">RafaelMatias1</a>.</p>
+      <p class="footer-disclaimer">Esta extensão não é afiliada ao csgo-skins.com ou à Valve Corporation.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>lucide.createIcons();</script>
+</body>
+</html>
