@@ -42,8 +42,9 @@
   <!-- HERO -->
   <section class="hero">
     <div class="hero-bg-grid"></div>
+    <div class="hero-particles"></div>
     <div class="container hero-content">
-      <div class="hero-badge"><i data-lucide="lock" style="width:13px;height:13px;vertical-align:middle;margin-right:6px;"></i> Exclusivo para csgo-skins.com</div>
+      <div class="hero-badge"><i data-lucide="zap" style="width:13px;height:13px;vertical-align:middle;margin-right:6px;"></i> Disponível para múltiplos sites de skin</div>
       <h1 class="hero-title">
         A extensão que todo<br />
         <span class="gradient-text">criador de conteúdo</span><br />
@@ -64,12 +65,12 @@
         </div>
         <div class="stat-divider"></div>
         <div class="stat">
-          <span class="stat-value">0</span>
+          <span class="stat-value" data-count="0">0</span>
           <span class="stat-label">Dados coletados</span>
         </div>
         <div class="stat-divider"></div>
         <div class="stat">
-          <span class="stat-value">1</span>
+          <span class="stat-value" data-count="1">1</span>
           <span class="stat-label">Cliente ativo</span>
         </div>
       </div>
@@ -83,7 +84,7 @@
   <!-- FEATURES -->
   <section class="section features" id="features">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header reveal">
         <span class="section-tag">Funcionalidades</span>
         <h2 class="section-title">Tudo que você precisa<br />numa única extensão</h2>
         <p class="section-subtitle">Desenvolvida pensando em transparência, automação e experiência do criador.</p>
@@ -141,16 +142,16 @@
   <!-- FOR WHO -->
   <section class="section for-who">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header reveal">
         <span class="section-tag">Para quem é</span>
         <h2 class="section-title">Feita para criadores<br />que querem se destacar</h2>
       </div>
-      <ul class="for-who-list for-who-list--centered">
+      <ul class="for-who-list">
         <li>
           <span class="check-icon"><i data-lucide="check-circle-2"></i></span>
           <div>
             <strong>Criadores de conteúdo</strong>
-            <p>Streamers e Youtubers que fazem upgrades no csgo-skins.com e querem uma apresentação profissional.</p>
+            <p>Streamers e Youtubers que fazem upgrades em sites de skin e querem uma apresentação profissional.</p>
           </div>
         </li>
         <li>
@@ -168,37 +169,57 @@
           </div>
         </li>
       </ul>
-      <!-- CAROUSEL -->
-      <div class="carousel" id="carousel">
-        <div class="carousel-track" id="carouselTrack">
-          <div class="carousel-slide">
-            <img src="screenshot-1.png" alt="CSGO Roll Viewer — histórico de rolls" loading="lazy" />
+    </div>
+  </section>
+
+  <!-- SHOWCASE — Imagens reais da ferramenta -->
+  <section class="section showcase" id="showcase">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Veja em ação</span>
+        <h2 class="section-title">A extensão rodando de verdade<br />no <span class="gradient-text">csgo-skins.com</span></h2>
+        <p class="section-subtitle">Imagens reais da ferramenta em uso pelo GordaoDAORA — nosso primeiro cliente ativo.</p>
+      </div>
+      <div class="reveal-scale">
+        <!-- CAROUSEL -->
+        <div class="carousel" id="carousel">
+          <div class="carousel-track" id="carouselTrack">
+            <div class="carousel-slide">
+              <img src="screenshot-1.png" alt="CSGO Roll Viewer — histórico de rolls" loading="lazy" />
+            </div>
+            <div class="carousel-slide">
+              <img src="screenshot-2.png" alt="CSGO Roll Viewer — atualizador com rolls" loading="lazy" />
+            </div>
+            <div class="carousel-slide">
+              <img src="screenshot-3.png" alt="CSGO Roll Viewer — grade de rolls e barra de progresso" loading="lazy" />
+            </div>
+            <div class="carousel-slide">
+              <img src="screenshot-4.png" alt="CSGO Roll Viewer — criadores parceiros" loading="lazy" />
+            </div>
+            <div class="carousel-slide">
+              <img src="screenshot-5.png" alt="CSGO Roll Viewer — badge no inventário" loading="lazy" />
+            </div>
+            <div class="carousel-slide">
+              <img src="screenshot-6.png" alt="CSGO Roll Viewer — abertura de caixas" loading="lazy" />
+            </div>
           </div>
-          <div class="carousel-slide">
-            <img src="screenshot-2.png" alt="CSGO Roll Viewer — atualizador com rolls" loading="lazy" />
-          </div>
-          <div class="carousel-slide">
-            <img src="screenshot-3.png" alt="CSGO Roll Viewer — grade de rolls e barra de progresso" loading="lazy" />
-          </div>
-          <div class="carousel-slide">
-            <img src="screenshot-4.png" alt="CSGO Roll Viewer — criadores parceiros" loading="lazy" />
-          </div>
-          <div class="carousel-slide">
-            <img src="screenshot-5.png" alt="CSGO Roll Viewer — badge no inventário" loading="lazy" />
-          </div>
-          <div class="carousel-slide">
-            <img src="screenshot-6.png" alt="CSGO Roll Viewer — abertura de caixas" loading="lazy" />
-          </div>
+
+          <button class="carousel-btn carousel-btn--prev" id="carouselPrev" aria-label="Anterior">
+            <i data-lucide="chevron-left"></i>
+          </button>
+          <button class="carousel-btn carousel-btn--next" id="carouselNext" aria-label="Próximo">
+            <i data-lucide="chevron-right"></i>
+          </button>
+
+          <div class="carousel-dots" id="carouselDots"></div>
         </div>
-
-        <button class="carousel-btn carousel-btn--prev" id="carouselPrev" aria-label="Anterior">
-          <i data-lucide="chevron-left"></i>
-        </button>
-        <button class="carousel-btn carousel-btn--next" id="carouselNext" aria-label="Próximo">
-          <i data-lucide="chevron-right"></i>
-        </button>
-
-        <div class="carousel-dots" id="carouselDots"></div>
+      </div>
+      <div class="showcase-client reveal" style="margin-top:2rem;">
+        <img src="gordao.jpeg" alt="GordaoDAORA" class="showcase-avatar" />
+        <div class="showcase-client-info">
+          <strong>GordaoDAORA</strong>
+          <span>Plano Padrão — csgo-skins.com · Cliente ativo desde 2025</span>
+        </div>
       </div>
     </div>
   </section>
@@ -206,32 +227,32 @@
   <!-- PRICING -->
   <section class="section pricing" id="pricing">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header reveal">
         <span class="section-tag">Planos e Preços</span>
         <h2 class="section-title">Escolha o plano<br />ideal para seu canal</h2>
         <p class="section-subtitle">Escolha o plano que melhor se encaixa no seu canal. Todos incluem personalização visual completa.</p>
       </div>
       <div class="pricing-grid">
 
-        <div class="pricing-card">
+        <div class="pricing-card reveal">
           <div class="pricing-card-header">
             <span class="plan-name">Padrão</span>
             <div class="plan-price">
               <span class="price-value">R$ 200</span>
               <span class="price-period">/mês</span>
             </div>
-            <p class="plan-desc">Ideal para streamers e youtubers em crescimento.</p>
+            <p class="plan-desc">Para criadores que atuam em <strong>1 site</strong> de skin.</p>
           </div>
           <ul class="plan-features">
-            <li><span><i data-lucide="check"></i></span> Extensão completa e funcional</li>
-            <li><span><i data-lucide="check"></i></span> Personalização visual inicial</li>
+            <li><span><i data-lucide="check"></i></span> Extensão completa para <strong>1 site</strong></li>
+            <li><span><i data-lucide="check"></i></span> Personalização visual do canal</li>
             <li><span><i data-lucide="check"></i></span> Atualizações de correção</li>
             <li><span><i data-lucide="check"></i></span> Suporte via mensagem</li>
           </ul>
           <a href="#contact" class="btn btn-outline btn-block">Contratar Padrão</a>
         </div>
 
-        <div class="pricing-card pricing-card--featured">
+        <div class="pricing-card pricing-card--featured reveal">
           <div class="pricing-badge">Mais popular</div>
           <div class="pricing-card-header">
             <span class="plan-name">Plus</span>
@@ -239,10 +260,11 @@
               <span class="price-value">R$ 250</span>
               <span class="price-period">/mês</span>
             </div>
-            <p class="plan-desc">Ideal para canais com audiência consolidada (10k+ inscritos).</p>
+            <p class="plan-desc">Para criadores que atuam em <strong>2 sites</strong> diferentes.</p>
           </div>
           <ul class="plan-features">
             <li><span><i data-lucide="check"></i></span> Tudo do Padrão</li>
+            <li><span><i data-lucide="check"></i></span> Extensão para <strong>2 sites</strong> à sua escolha</li>
             <li><span><i data-lucide="check"></i></span> Até 3 personalizações/mês</li>
             <li><span><i data-lucide="check"></i></span> Suporte prioritário</li>
             <li><span><i data-lucide="check"></i></span> Atualizações de novos recursos</li>
@@ -250,18 +272,18 @@
           <a href="#contact" class="btn btn-primary btn-block">Contratar Plus</a>
         </div>
 
-        <div class="pricing-card">
+        <div class="pricing-card reveal">
           <div class="pricing-card-header">
             <span class="plan-name">Premium</span>
             <div class="plan-price">
-              <span class="price-value">R$ 350</span>
+              <span class="price-value">R$ 500</span>
               <span class="price-period">/mês</span>
             </div>
-            <p class="plan-desc">Ideal para grandes criadores e canais parceiros de sites.</p>
+            <p class="plan-desc">Para criadores que querem <strong>múltiplos sites</strong> — discutimos quais são compatíveis.</p>
           </div>
           <ul class="plan-features">
             <li><span><i data-lucide="check"></i></span> Tudo do Plus</li>
-            <li><span><i data-lucide="check"></i></span> Adaptação para outros sites de skin</li>
+            <li><span><i data-lucide="check"></i></span> <strong>Múltiplos sites</strong> sob consulta</li>
             <li><span><i data-lucide="check"></i></span> Funcionalidades exclusivas sob demanda</li>
             <li><span><i data-lucide="check"></i></span> Atendimento dedicado</li>
           </ul>
@@ -275,103 +297,116 @@
   <!-- PORTFOLIO -->
   <section class="section portfolio" id="portfolio">
     <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Portfólio</span>
-        <h2 class="section-title">Quem já usa o<br />CSGO Roll Viewer</h2>
-        <p class="section-subtitle">Acompanhe quem já está usando a extensão em seu canal.</p>
-      </div>
-      <div class="portfolio-grid">
-        <div class="portfolio-card">
-          <div class="portfolio-avatar">
-            <img src="gordao.jpeg" alt="GordaoDAORA" class="avatar-img" />
-          </div>
-          <div class="portfolio-info">
-            <span class="portfolio-badge">Cliente ativo</span>
-            <h3 class="portfolio-name">GordaoDAORA</h3>
-            <p class="portfolio-plan">Plano Padrão — csgo-skins.com</p>
-            <p class="portfolio-desc">
-              Criador de conteúdo no YouTube com foco em upgrades e aberturas de caixas no csgo-skins.com.
-              Utiliza a extensão para exibir rolls em tempo real e aumentar a credibilidade com sua audiência.
-            </p>
-          </div>
-        </div>
-        <div class="portfolio-card portfolio-card--open">
-          <div class="portfolio-avatar">
-            <div class="avatar-placeholder muted"><i data-lucide="user-plus"></i></div>
-          </div>
-          <div class="portfolio-info">
-            <span class="portfolio-badge open">Vaga aberta</span>
-            <h3 class="portfolio-name">Poderia ser você</h3>
-            <p class="portfolio-plan">Qualquer plano</p>
-            <p class="portfolio-desc">
-              Se você cria conteúdo no csgo-skins.com e quer se destacar com uma ferramenta exclusiva,
-              entre em contato e seja o próximo case de sucesso.
-            </p>
-            <a href="#contact" class="btn btn-primary" style="margin-top:1rem;">Quero fazer parte</a>
-          </div>
-        </div>
+      <div class="section-header reveal">
+        <span class="section-tag">Portfólio & Compatibilidade</span>
+        <h2 class="section-title">Extensões para os maiores<br />sites de skin do mundo</h2>
+        <p class="section-subtitle">Desenvolvemos extensões de Provably Fair para múltiplos sites. Confira o status de cada plataforma.</p>
       </div>
 
-      <!-- EM DESENVOLVIMENTO -->
-      <div class="section-header" style="margin-top: 4rem;">
-        <span class="section-tag">Em desenvolvimento</span>
-        <h2 class="section-title">Expansão para outros sites<br />com Provably Fair</h2>
-        <p class="section-subtitle">A tecnologia já existe. As extensões para os sites abaixo estão sendo desenvolvidas e em breve estarão disponíveis para contratação.</p>
+      <div class="platform-grid">
+
+        <!-- CSGO-SKINS — ATIVO -->
+        <div class="platform-card platform-card--live reveal">
+          <div class="platform-card-top">
+            <div class="platform-status-dot live"></div>
+            <span class="platform-status-label live">No ar</span>
+          </div>
+          <div class="platform-icon-wrap"><i data-lucide="crosshair"></i></div>
+          <h3 class="platform-name">csgo-skins.com</h3>
+          <div class="platform-meta">
+            <span class="platform-version"><i data-lucide="tag"></i> v1.0 — Estável</span>
+            <span class="platform-clients"><i data-lucide="users"></i> 1 cliente ativo</span>
+          </div>
+          <p class="platform-desc">Extensão completa e funcional. Disponível na Chrome Web Store com atualizações frequentes de correção e novos recursos.</p>
+          <ul class="platform-features-mini">
+            <li><i data-lucide="check"></i> Roll em tempo real</li>
+            <li><i data-lucide="check"></i> Histórico &amp; grade visual</li>
+            <li><i data-lucide="check"></i> Barra de progresso</li>
+            <li><i data-lucide="check"></i> Auto-restock</li>
+            <li><i data-lucide="check"></i> Badge no inventário</li>
+            <li><i data-lucide="check"></i> Personalização completa</li>
+          </ul>
+          <div class="platform-client-strip">
+            <img src="gordao.jpeg" alt="GordaoDAORA" class="mini-avatar" />
+            <span>GordaoDAORA — Plano Padrão</span>
+          </div>
+          <a href="#contact" class="btn btn-primary btn-block" style="margin-top:1.25rem;">Contratar para csgo-skins</a>
+        </div>
+
+        <!-- KEYDROP -->
+        <div class="platform-card platform-card--dev reveal">
+          <div class="platform-card-top">
+            <div class="platform-status-dot dev"></div>
+            <span class="platform-status-label dev">Em desenvolvimento</span>
+          </div>
+          <div class="platform-icon-wrap"><i data-lucide="box"></i></div>
+          <h3 class="platform-name">KeyDrop</h3>
+          <div class="platform-meta">
+            <span class="platform-version"><i data-lucide="code-2"></i> keydrop.com</span>
+            <span class="platform-clients"><i data-lucide="users"></i> Vagas abertas</span>
+          </div>
+          <p class="platform-desc">Extensão em desenvolvimento para exibição do Provably Fair nas aberturas de caixas e upgrades do KeyDrop. Interessados podem entrar em contato para priorizar o lançamento.</p>
+          <ul class="platform-features-mini">
+            <li><i data-lucide="check"></i> Possui sistema Provably Fair</li>
+            <li><i data-lucide="check"></i> Compatível com Chrome</li>
+            <li><i data-lucide="clock"></i> Roll em tempo real (em breve)</li>
+            <li><i data-lucide="clock"></i> Histórico &amp; grade visual (em breve)</li>
+            <li><i data-lucide="clock"></i> Personalização do canal (em breve)</li>
+          </ul>
+          <a href="#contact" class="btn btn-outline btn-block" style="margin-top:1.25rem;">Tenho interesse — KeyDrop</a>
+        </div>
+
+        <!-- SKIN.CLUB -->
+        <div class="platform-card platform-card--dev reveal">
+          <div class="platform-card-top">
+            <div class="platform-status-dot dev"></div>
+            <span class="platform-status-label dev">Em desenvolvimento</span>
+          </div>
+          <div class="platform-icon-wrap"><i data-lucide="layers"></i></div>
+          <h3 class="platform-name">Skin.club</h3>
+          <div class="platform-meta">
+            <span class="platform-version"><i data-lucide="code-2"></i> skin.club</span>
+            <span class="platform-clients"><i data-lucide="users"></i> Vagas abertas</span>
+          </div>
+          <p class="platform-desc">Extensão planejada para o Skin.club com visualização de rolls, grade visual e destaque automático de vitórias. Entre em contato para garantir sua vaga prioritária.</p>
+          <ul class="platform-features-mini">
+            <li><i data-lucide="check"></i> Possui sistema Provably Fair</li>
+            <li><i data-lucide="check"></i> Compatível com Chrome</li>
+            <li><i data-lucide="clock"></i> Roll em tempo real (em breve)</li>
+            <li><i data-lucide="clock"></i> Grade visual 2×9 (em breve)</li>
+            <li><i data-lucide="clock"></i> Personalização do canal (em breve)</li>
+          </ul>
+          <a href="#contact" class="btn btn-outline btn-block" style="margin-top:1.25rem;">Tenho interesse — Skin.club</a>
+        </div>
+
+        <!-- CSGO.NET -->
+        <div class="platform-card platform-card--dev reveal">
+          <div class="platform-card-top">
+            <div class="platform-status-dot dev"></div>
+            <span class="platform-status-label dev">Em desenvolvimento</span>
+          </div>
+          <div class="platform-icon-wrap"><i data-lucide="globe"></i></div>
+          <h3 class="platform-name">CSGO.net</h3>
+          <div class="platform-meta">
+            <span class="platform-version"><i data-lucide="code-2"></i> csgo.net</span>
+            <span class="platform-clients"><i data-lucide="users"></i> Vagas abertas</span>
+          </div>
+          <p class="platform-desc">Extensão para exibir o roll e histórico do Provably Fair no CSGO.net em tempo real, facilitando a transparência com sua audiência em lives e vídeos.</p>
+          <ul class="platform-features-mini">
+            <li><i data-lucide="check"></i> Possui sistema Provably Fair</li>
+            <li><i data-lucide="check"></i> Compatível com Chrome</li>
+            <li><i data-lucide="clock"></i> Roll em tempo real (em breve)</li>
+            <li><i data-lucide="clock"></i> Histórico de rolls (em breve)</li>
+            <li><i data-lucide="clock"></i> Personalização do canal (em breve)</li>
+          </ul>
+          <a href="#contact" class="btn btn-outline btn-block" style="margin-top:1.25rem;">Tenho interesse — CSGO.net</a>
+        </div>
+
       </div>
-      <div class="dev-sites-grid">
 
-        <div class="dev-site-card">
-          <div class="dev-site-header">
-            <div class="dev-site-icon"><i data-lucide="box"></i></div>
-            <span class="dev-badge dev-badge--progress">Em desenvolvimento</span>
-          </div>
-          <h3 class="dev-site-name">KeyDrop</h3>
-          <p class="dev-site-url">keydrop.com</p>
-          <p class="dev-site-desc">Extensão para exibição do Provably Fair em tempo real nas aberturas de caixas e upgrades do KeyDrop, com histórico e barra de progresso.</p>
-          <div class="dev-site-features">
-            <span><i data-lucide="check-circle-2"></i> Possui sistema Provably Fair</span>
-            <span><i data-lucide="check-circle-2"></i> Compatível com Chrome</span>
-            <span><i data-lucide="clock"></i> Previsão: em breve</span>
-          </div>
-          <a href="#contact" class="btn btn-outline btn-block" style="margin-top:1.25rem;">Tenho interesse</a>
-        </div>
-
-        <div class="dev-site-card">
-          <div class="dev-site-header">
-            <div class="dev-site-icon"><i data-lucide="layers"></i></div>
-            <span class="dev-badge dev-badge--progress">Em desenvolvimento</span>
-          </div>
-          <h3 class="dev-site-name">Skin.club</h3>
-          <p class="dev-site-url">skin.club</p>
-          <p class="dev-site-desc">Extensão para visualização dos rolls do Provably Fair no Skin.club, com grade visual e destaque automático de vitórias baseado em porcentagem.</p>
-          <div class="dev-site-features">
-            <span><i data-lucide="check-circle-2"></i> Possui sistema Provably Fair</span>
-            <span><i data-lucide="check-circle-2"></i> Compatível com Chrome</span>
-            <span><i data-lucide="clock"></i> Previsão: em breve</span>
-          </div>
-          <a href="#contact" class="btn btn-outline btn-block" style="margin-top:1.25rem;">Tenho interesse</a>
-        </div>
-
-        <div class="dev-site-card">
-          <div class="dev-site-header">
-            <div class="dev-site-icon"><i data-lucide="globe"></i></div>
-            <span class="dev-badge dev-badge--progress">Em desenvolvimento</span>
-          </div>
-          <h3 class="dev-site-name">CSGO.net</h3>
-          <p class="dev-site-url">csgo.net</p>
-          <p class="dev-site-desc">Extensão para exibir o número do roll e histórico de resultados do Provably Fair no CSGO.net, facilitando a transparência em lives e vídeos.</p>
-          <div class="dev-site-features">
-            <span><i data-lucide="check-circle-2"></i> Possui sistema Provably Fair</span>
-            <span><i data-lucide="check-circle-2"></i> Compatível com Chrome</span>
-            <span><i data-lucide="clock"></i> Previsão: em breve</span>
-          </div>
-          <a href="#contact" class="btn btn-outline btn-block" style="margin-top:1.25rem;">Tenho interesse</a>
-        </div>
-
-      </div>
-      <div class="install-note" style="margin-top:2rem;">
+      <div class="install-note reveal" style="margin-top:2rem;">
         <i data-lucide="info"></i>
-        <span>Já usa um desses sites e quer a extensão antes do lançamento oficial? Entre em contato e priorize seu desenvolvimento.</span>
+        <span>Usa outro site com Provably Fair que não está na lista? Entre em contato — se o site tiver o sistema, a extensão pode ser desenvolvida.</span>
       </div>
 
     </div>
@@ -381,10 +416,10 @@
   <section class="section security" id="security">
     <div class="container">
       <div class="security-inner">
-        <div class="security-icon-wrap">
+        <div class="security-icon-wrap reveal-left">
           <div class="security-icon-bg"><i data-lucide="shield-check"></i></div>
         </div>
-        <div class="security-text">
+        <div class="security-text reveal-right">
           <span class="section-tag">Segurança & Privacidade</span>
           <h2 class="section-title">Verificada pelo Google.<br />Seus dados protegidos.</h2>
           <p>A extensão passou pela revisão oficial da Chrome Web Store e cumpre integralmente as <strong>Políticas do Programa para Desenvolvedores</strong> do Google.</p>
@@ -392,8 +427,8 @@
             <li><span><i data-lucide="shield"></i></span> Não coleta dados pessoais, senhas ou informações financeiras</li>
             <li><span><i data-lucide="shield"></i></span> Não envia nada para servidores externos</li>
             <li><span><i data-lucide="shield"></i></span> Não vende nem transfere dados a terceiros</li>
-            <li><span><i data-lucide="shield"></i></span> Lê apenas o conteúdo da página do csgo-skins.com (necessário para exibir o roll)</li>
-            <li><span><i data-lucide="shield"></i></span> Funciona exclusivamente no csgo-skins.com</li>
+            <li><span><i data-lucide="shield"></i></span> Lê apenas o conteúdo da página do site (necessário para exibir o roll)</li>
+            <li><span><i data-lucide="shield"></i></span> Funciona exclusivamente no site contratado</li>
           </ul>
           <div class="security-disclosure">
             <div class="disclosure-header">
@@ -414,12 +449,12 @@
   <!-- HOW TO INSTALL -->
   <section class="section how-to" id="install">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header reveal">
         <span class="section-tag">Como funciona o acesso</span>
         <h2 class="section-title">Simples de instalar,<br />fácil de gerenciar</h2>
         <p class="section-subtitle">A extensão fica disponível na Chrome Web Store. Você instala em segundos e o acesso é mantido enquanto a assinatura estiver ativa.</p>
       </div>
-      <div class="steps-grid">
+      <div class="steps-grid reveal">
         <div class="step">
           <div class="step-number">01</div>
           <h4>Contrate um plano</h4>
@@ -444,7 +479,7 @@
           <p>Enquanto a assinatura estiver em dia, a extensão funciona normalmente. Sem renovação, o acesso é removido.</p>
         </div>
       </div>
-      <div class="install-note">
+      <div class="install-note reveal">
         <i data-lucide="info"></i>
         <span>O acesso é gerenciado diretamente pelo desenvolvedor. Não é necessário configurar nada manualmente — tudo funciona pela Chrome Web Store.</span>
       </div>
@@ -455,7 +490,7 @@
   <section class="section contact" id="contact">
     <div class="container">
       <div class="contact-inner">
-        <div class="contact-text">
+        <div class="contact-text reveal-left">
           <span class="section-tag">Contato</span>
           <h2 class="section-title">Pronto para elevar<br />seu conteúdo?</h2>
           <p>Entre em contato para contratar, tirar dúvidas ou solicitar uma demonstração personalizada.</p>
@@ -470,13 +505,13 @@
             </a>
           </div>
         </div>
-        <div class="contact-card">
+        <div class="contact-card reveal-right">
           <div class="contact-card-inner">
             <div class="contact-card-icon"><i data-lucide="rocket"></i></div>
             <h3>Comece agora</h3>
             <p>Assine mensalmente e tenha acesso completo à extensão enquanto sua assinatura estiver ativa.</p>
             <div class="contact-steps-mini">
-              <div class="mini-step"><span>1.</span> Entre em contato via GitHub</div>
+              <div class="mini-step"><span>1.</span> Entre em contato via GitHub ou e-mail</div>
               <div class="mini-step"><span>2.</span> Escolha seu plano e pague a mensalidade</div>
               <div class="mini-step"><span>3.</span> Receba o link e instale direto da Chrome Web Store</div>
             </div>
@@ -501,7 +536,7 @@
         <span class="logo-text">CSGO Roll Viewer</span>
       </div>
       <p class="footer-copy">© 2026 CSGO Roll Viewer. Desenvolvido por <a href="https://github.com/RafaelMatias1" target="_blank" rel="noopener">RafaelMatias1</a>.</p>
-      <p class="footer-disclaimer">Esta extensão não é afiliada ao csgo-skins.com ou à Valve Corporation.</p>
+      <p class="footer-disclaimer">Esta extensão não é afiliada aos sites de skin mencionados ou à Valve Corporation.</p>
     </div>
   </footer>
 
