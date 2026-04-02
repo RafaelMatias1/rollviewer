@@ -3,16 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CSGO Roll Viewer — Extensão para Criadores de Conteúdo</title>
-  <meta name="description" content="A extensão que todo criador de conteúdo de CS precisa. Visualize seus rolls em tempo real no csgo-skins.com." />
+  <title>GordaoDAORA CSGO-SKINS ROLLs — Extensão Chrome para Criadores de CS</title>
+  <meta name="description" content="Extensão oficial GordaoDAORA para csgo-skins.com. Rolls em tempo real, odds de cases, modo streamer, auto-restock, badge Provably Fair e muito mais. Disponível na Chrome Web Store." />
+  <meta property="og:title" content="GordaoDAORA CSGO-SKINS ROLLs" />
+  <meta property="og:description" content="Extensão Chrome para criadores de conteúdo de CS — rolls em tempo real, Provably Fair, modo streamer e personalização do canal." />
+  <meta property="og:image" content="csgo-skins/screenshot-5.png" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
-  <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="shortcut icon" href="favicon.svg" />
-  <!-- Lucide Icons (SVG icon library, zero emojis) -->
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 </head>
 <body>
@@ -22,7 +25,7 @@
     <div class="container nav-inner">
       <div class="logo">
         <span class="logo-icon"><i data-lucide="crosshair"></i></span>
-        <span class="logo-text">CSGO Roll Viewer</span>
+        <span class="logo-text">GordaoDAORA ROLLs</span>
       </div>
       <nav class="nav-links">
         <a href="#features">Funcionalidades</a>
@@ -47,24 +50,32 @@
     <div class="hero-bg-grid"></div>
     <div class="hero-particles"></div>
     <div class="container hero-content">
-      <div class="hero-badge"><i data-lucide="zap" style="width:13px;height:13px;vertical-align:middle;margin-right:6px;"></i> Disponível para múltiplos sites de skin</div>
+      <div class="hero-badge"><i data-lucide="zap" style="width:13px;height:13px;vertical-align:middle;margin-right:6px;"></i> Disponível agora na Chrome Web Store</div>
       <h1 class="hero-title">
         A extensão que todo<br />
         <span class="gradient-text">criador de conteúdo</span><br />
         de CS precisa.
       </h1>
       <p class="hero-subtitle">
-        Visualize seus rolls em tempo real, com histórico, barra de progresso e muito mais —
-        direto no <strong>csgo-skins.com</strong>. Personalizada com as cores e identidade do seu canal.
+        Rolls em tempo real, histórico dos últimos 10 drops, odds de cases, modo streamer,
+        auto-restock e muito mais — direto no <strong>csgo-skins.com</strong>.
       </p>
       <div class="hero-actions">
-        <a href="#pricing" class="btn btn-primary btn-lg">Ver planos e preços</a>
+        <a href="https://chromewebstore.google.com/detail/GordaoDAORA%20CSGO-SKINS%20ROLLs/jogmkjgnedeflninlnahcdkglbcbkmlk" target="_blank" rel="noopener" class="btn btn-primary btn-lg">
+          <i data-lucide="chrome" style="width:18px;height:18px;vertical-align:middle;margin-right:8px;"></i>
+          Instalar no Chrome — Grátis
+        </a>
         <a href="#features" class="btn btn-ghost btn-lg">Ver funcionalidades</a>
       </div>
       <div class="hero-stats">
         <div class="stat">
           <span class="stat-value">Chrome</span>
           <span class="stat-label">Verificado Google</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-value">v1.7.27</span>
+          <span class="stat-label">Versão atual</span>
         </div>
         <div class="stat-divider"></div>
         <div class="stat">
@@ -93,51 +104,79 @@
         <p class="section-subtitle">Desenvolvida pensando em transparência, automação e experiência do criador.</p>
       </div>
       <div class="features-grid">
+
         <div class="feature-card feature-card--highlight">
           <div class="feature-icon"><i data-lucide="zap"></i></div>
-          <h3>Roll em Tempo Real</h3>
-          <p>Exibe o número do roll imediatamente após cada upgrade ou abertura de caixa, sem delay.</p>
+          <h3>Últimos 10 Rolls</h3>
+          <p>Painel sempre populado com as 10 últimas skins dropadas — em ordem cronológica real. Atualiza em tempo real a cada novo drop, sem precisar abrir nenhuma caixa.</p>
         </div>
+
         <div class="feature-card">
-          <div class="feature-icon"><i data-lucide="clock"></i></div>
-          <h3>Histórico de Rolls</h3>
-          <p>Histórico dos últimos 10 rolls com origem identificada (caixa, atualizador e outros).</p>
+          <div class="feature-icon"><i data-lucide="activity"></i></div>
+          <h3>Badge em Tempo Real</h3>
+          <p>Badge flutuante mostra o número do roll imediatamente após cada abertura de caixa ou upgrade, com cor por faixa: 🔴 baixo · 🟡 médio · 🟢 alto.</p>
         </div>
+
         <div class="feature-card">
           <div class="feature-icon"><i data-lucide="grid-2x2"></i></div>
           <h3>Grade Visual 2×9</h3>
-          <p>Grade com os 18 últimos rolls do atualizador, organizados em 2 linhas de 9 para fácil leitura.</p>
+          <p>Grade com os 18 últimos rolls do atualizador, organizados em 2 linhas de 9 células coloridas para fácil leitura durante lives.</p>
         </div>
+
         <div class="feature-card">
           <div class="feature-icon"><i data-lucide="bar-chart-2"></i></div>
           <h3>Barra de Progresso</h3>
-          <p>Visualize onde o roll caiu dentro da escala de 0 a 100.000 com barra colorida.</p>
+          <p>Visualize onde o roll caiu dentro da escala de 0 a 100.000, com zona de vitória colorida baseada na sua chance configurada.</p>
         </div>
-        <div class="feature-card">
-          <div class="feature-icon"><i data-lucide="trophy"></i></div>
-          <h3>Zona de Vitória</h3>
-          <p>Destaque colorido automático com base na sua porcentagem de chance configurada.</p>
-        </div>
+
         <div class="feature-card">
           <div class="feature-icon"><i data-lucide="percent"></i></div>
           <h3>Botões de % Rápidos</h3>
-          <p>Configure rapidamente as chances com botões pré-definidos: 3%, 7%, 15%, 30% e 75%.</p>
+          <p>Configure rapidamente as chances com botões pré-definidos: 3%, 7%, 15%, 30% e 75% integrados visualmente ao upgrader.</p>
         </div>
+
         <div class="feature-card">
           <div class="feature-icon"><i data-lucide="refresh-cw"></i></div>
           <h3>Auto-restock</h3>
-          <p>Seleciona automaticamente a skin mais barata após uma derrota, otimizando o fluxo de conteúdo.</p>
+          <p>Seleciona automaticamente a skin mais barata do inventário após uma derrota, mantendo o fluxo de conteúdo sem pausas.</p>
         </div>
+
+        <div class="feature-card">
+          <div class="feature-icon"><i data-lucide="pie-chart"></i></div>
+          <h3>Odds de Cases</h3>
+          <p>Probabilidades reais de cada item da caixa, exibidas diretamente na página do case. Suporta modos Normal, Booster e Jester.</p>
+        </div>
+
         <div class="feature-card">
           <div class="feature-icon"><i data-lucide="tag"></i></div>
           <h3>Badge no Inventário</h3>
-          <p>Badge de roll em cada item do inventário, com borda verde destacando os itens ganhos.</p>
+          <p>Número do roll Provably Fair em cada item da página /account, com borda destacada em itens ganhos. Clique abre a verificação.</p>
         </div>
+
+        <div class="feature-card">
+          <div class="feature-icon"><i data-lucide="eye-off"></i></div>
+          <h3>Modo Streamer</h3>
+          <p>Oculta todos os valores monetários da tela com um clique. Ideal para lives. Cobre R$, $, €, moedas virtuais e muito mais.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon"><i data-lucide="users"></i></div>
+          <h3>Painel de Criadores</h3>
+          <p>Painel com os canais do GordaoDAORA (YouTube, Twitch, Instagram) integrado ao site, sempre visível durante o conteúdo.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon"><i data-lucide="keyboard"></i></div>
+          <h3>Código Automático</h3>
+          <p>O código do criador é preenchido automaticamente na tela de depósito. Nunca perde uma comissão por esquecer de digitar.</p>
+        </div>
+
         <div class="feature-card">
           <div class="feature-icon"><i data-lucide="paintbrush"></i></div>
           <h3>Totalmente Personalizada</h3>
-          <p>Cores, nome, ícones e identidade visual do seu canal integrados na extensão.</p>
+          <p>Cores, nome, ícones e identidade visual do seu canal integrados na extensão. Parece que foi feita só pra você — porque foi.</p>
         </div>
+
       </div>
     </div>
   </section>
@@ -154,75 +193,84 @@
           <span class="check-icon"><i data-lucide="check-circle-2"></i></span>
           <div>
             <strong>Criadores de conteúdo</strong>
-            <p>Streamers e Youtubers que fazem upgrades em sites de skin e querem uma apresentação profissional.</p>
+            <p>Streamers e Youtubers que fazem upgrades em sites de skin e querem uma apresentação profissional com Provably Fair visível.</p>
           </div>
         </li>
         <li>
           <span class="check-icon"><i data-lucide="check-circle-2"></i></span>
           <div>
             <strong>Transparência com a audiência</strong>
-            <p>Mostre o Provably Fair em tempo real, gerando confiança e engajamento com seu público.</p>
+            <p>Mostre o Provably Fair em tempo real durante lives e vídeos, gerando confiança e engajamento com seu público.</p>
           </div>
         </li>
         <li>
           <span class="check-icon"><i data-lucide="check-circle-2"></i></span>
           <div>
             <strong>Quem quer automatizar</strong>
-            <p>Reduza o trabalho manual com auto-restock e foque no que importa: criar conteúdo.</p>
+            <p>Auto-restock, código do criador automático e modo streamer reduzem o trabalho manual para você focar no conteúdo.</p>
           </div>
         </li>
       </ul>
     </div>
   </section>
 
-  <!-- SHOWCASE — Imagens reais da ferramenta -->
+  <!-- SHOWCASE -->
   <section class="section showcase" id="showcase">
     <div class="container">
       <div class="section-header reveal">
         <span class="section-tag">Veja em ação</span>
         <h2 class="section-title">A extensão rodando de verdade<br />no <span class="gradient-text">csgo-skins.com</span></h2>
-        <p class="section-subtitle">Imagens reais da ferramenta em uso pelo GordaoDAORA — nosso primeiro cliente ativo.</p>
+        <p class="section-subtitle">Screenshot real da ferramenta em uso pelo GordaoDAORA — nosso primeiro cliente ativo.</p>
       </div>
-      <div class="reveal-scale">
-        <!-- CAROUSEL -->
-        <div class="carousel" id="carousel">
-          <div class="carousel-track" id="carouselTrack">
-            <div class="carousel-slide">
-              <img src="csgo-skins/screenshot-1.png" alt="CSGO Roll Viewer — histórico de rolls" loading="lazy" />
-            </div>
-            <div class="carousel-slide">
-              <img src="csgo-skins/screenshot-2.png" alt="CSGO Roll Viewer — atualizador com rolls" loading="lazy" />
-            </div>
-            <div class="carousel-slide">
-              <img src="csgo-skins/screenshot-3.png" alt="CSGO Roll Viewer — grade de rolls e barra de progresso" loading="lazy" />
-            </div>
-            <div class="carousel-slide">
-              <img src="csgo-skins/screenshot-4.png" alt="CSGO Roll Viewer — criadores parceiros" loading="lazy" />
-            </div>
-            <div class="carousel-slide">
-              <img src="csgo-skins/screenshot-5.png" alt="CSGO Roll Viewer — badge no inventário" loading="lazy" />
-            </div>
-            <div class="carousel-slide">
-              <img src="csgo-skins/screenshot-6.png" alt="CSGO Roll Viewer — abertura de caixas" loading="lazy" />
-            </div>
-          </div>
-
-          <button class="carousel-btn carousel-btn--prev" id="carouselPrev" aria-label="Anterior">
-            <i data-lucide="chevron-left"></i>
-          </button>
-          <button class="carousel-btn carousel-btn--next" id="carouselNext" aria-label="Próximo">
-            <i data-lucide="chevron-right"></i>
-          </button>
-
-          <div class="carousel-dots" id="carouselDots"></div>
+      <div class="reveal-scale showcase-img-wrap">
+        <img
+          src="csgo-skins/screenshot-5.png"
+          alt="GordaoDAORA ROLLs — Badge de roll no inventário csgo-skins.com"
+          class="showcase-main-img"
+          loading="lazy"
+        />
+        <div class="showcase-img-badge">
+          <span class="showcase-img-badge-dot"></span>
+          Extensão ativa — csgo-skins.com
         </div>
       </div>
       <div class="showcase-client reveal" style="margin-top:2rem;">
         <img src="assinantes/gordao.jpeg" alt="GordaoDAORA" class="showcase-avatar" />
         <div class="showcase-client-info">
           <strong>GordaoDAORA</strong>
-          <span>Plano Padrão — csgo-skins.com · Cliente ativo</span>
+          <span>Plano Padrão — csgo-skins.com · Cliente ativo · v1.7.27</span>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INSTALL CTA -->
+  <section class="section install-cta-section" style="padding-top:0;padding-bottom:0;">
+    <div class="container">
+      <div class="install-cta-banner reveal">
+        <div class="install-cta-text">
+          <div class="install-cta-info">
+            <strong>Já disponível na Chrome Web Store</strong>
+            <span>Instale gratuitamente — o acesso é controlado por licença.</span>
+          </div>
+        </div>
+        <a
+          href="https://chromewebstore.google.com/detail/GordaoDAORA%20CSGO-SKINS%20ROLLs/jogmkjgnedeflninlnahcdkglbcbkmlk"
+          target="_blank"
+          rel="noopener"
+          class="btn-chrome-store"
+          aria-label="Instalar no Chrome"
+        >
+          <!-- Google "G" SVG oficial -->
+          <svg width="22" height="22" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
+            <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
+            <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>
+            <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.31-8.16 2.31-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
+            <path fill="none" d="M0 0h48v48H0z"/>
+          </svg>
+          <span>Instalar no Chrome</span>
+        </a>
       </div>
     </div>
   </section>
@@ -233,7 +281,7 @@
       <div class="section-header reveal">
         <span class="section-tag">Planos e Preços</span>
         <h2 class="section-title">Escolha o plano<br />ideal para seu canal</h2>
-        <p class="section-subtitle">Escolha o plano que melhor se encaixa no seu canal. Todos incluem personalização visual completa.</p>
+        <p class="section-subtitle">Todos os planos incluem personalização visual completa com as cores e identidade do seu canal.</p>
       </div>
       <div class="pricing-grid">
 
@@ -248,6 +296,7 @@
           </div>
           <ul class="plan-features">
             <li><span><i data-lucide="check"></i></span> Extensão completa para <strong>1 site</strong></li>
+            <li><span><i data-lucide="check"></i></span> Todas as funcionalidades incluídas</li>
             <li><span><i data-lucide="check"></i></span> Personalização visual do canal</li>
             <li><span><i data-lucide="check"></i></span> Atualizações de correção</li>
             <li><span><i data-lucide="check"></i></span> Suporte via mensagem</li>
@@ -317,23 +366,27 @@
           <div class="platform-icon-wrap"><i data-lucide="crosshair"></i></div>
           <h3 class="platform-name">csgo-skins.com</h3>
           <div class="platform-meta">
-            <span class="platform-version"><i data-lucide="tag"></i> v1.0 — Estável</span>
+            <span class="platform-version"><i data-lucide="tag"></i> v1.7.27 — Estável</span>
             <span class="platform-clients"><i data-lucide="users"></i> 1 cliente ativo</span>
           </div>
           <p class="platform-desc">Extensão completa e funcional. Disponível na Chrome Web Store com atualizações frequentes de correção e novos recursos.</p>
           <ul class="platform-features-mini">
-            <li><i data-lucide="check"></i> Roll em tempo real</li>
-            <li><i data-lucide="check"></i> Histórico &amp; grade visual</li>
-            <li><i data-lucide="check"></i> Barra de progresso</li>
-            <li><i data-lucide="check"></i> Auto-restock</li>
-            <li><i data-lucide="check"></i> Badge no inventário</li>
-            <li><i data-lucide="check"></i> Personalização completa</li>
+            <li><i data-lucide="check"></i> Últimos 10 rolls (seed do inventário)</li>
+            <li><i data-lucide="check"></i> Badge em tempo real</li>
+            <li><i data-lucide="check"></i> Grade 2×9 + barra de progresso</li>
+            <li><i data-lucide="check"></i> Odds de cases (Normal/Booster/Jester)</li>
+            <li><i data-lucide="check"></i> Auto-restock + botões % rápidos</li>
+            <li><i data-lucide="check"></i> Badge no inventário + modo streamer</li>
+            <li><i data-lucide="check"></i> Código do criador automático</li>
           </ul>
           <div class="platform-client-strip">
             <img src="assinantes/gordao.jpeg" alt="GordaoDAORA" class="mini-avatar" />
             <span>GordaoDAORA — Plano Padrão</span>
           </div>
-          <a href="#contact" class="btn btn-primary btn-block" style="margin-top:1.25rem;">Contratar para csgo-skins</a>
+          <a href="https://chromewebstore.google.com/detail/GordaoDAORA%20CSGO-SKINS%20ROLLs/jogmkjgnedeflninlnahcdkglbcbkmlk" target="_blank" rel="noopener" class="btn btn-primary btn-block" style="margin-top:1.25rem;">
+            <i data-lucide="chrome" style="width:16px;height:16px;vertical-align:middle;margin-right:6px;"></i>
+            Ver na Chrome Web Store
+          </a>
         </div>
 
         <!-- KEYDROP -->
@@ -348,12 +401,12 @@
             <span class="platform-version"><i data-lucide="code-2"></i> keydrop.com</span>
             <span class="platform-clients"><i data-lucide="users"></i> Vagas abertas</span>
           </div>
-          <p class="platform-desc">Extensão em desenvolvimento para exibição do Provably Fair nas aberturas de caixas e upgrades do KeyDrop. Interessados podem entrar em contato para priorizar o lançamento.</p>
+          <p class="platform-desc">Extensão em desenvolvimento para exibição do Provably Fair nas aberturas de caixas e upgrades do KeyDrop.</p>
           <ul class="platform-features-mini">
             <li><i data-lucide="check"></i> Possui sistema Provably Fair</li>
             <li><i data-lucide="check"></i> Compatível com Chrome</li>
             <li><i data-lucide="clock"></i> Roll em tempo real (em breve)</li>
-            <li><i data-lucide="clock"></i> Histórico &amp; grade visual (em breve)</li>
+            <li><i data-lucide="clock"></i> Histórico & grade visual (em breve)</li>
             <li><i data-lucide="clock"></i> Personalização do canal (em breve)</li>
           </ul>
           <a href="#contact" class="btn btn-outline btn-block" style="margin-top:1.25rem;">Tenho interesse — KeyDrop</a>
@@ -371,7 +424,7 @@
             <span class="platform-version"><i data-lucide="code-2"></i> skin.club</span>
             <span class="platform-clients"><i data-lucide="users"></i> Vagas abertas</span>
           </div>
-          <p class="platform-desc">Extensão planejada para o Skin.club com visualização de rolls, grade visual e destaque automático de vitórias. Entre em contato para garantir sua vaga prioritária.</p>
+          <p class="platform-desc">Extensão planejada com visualização de rolls, grade visual e destaque automático de vitórias para o Skin.club.</p>
           <ul class="platform-features-mini">
             <li><i data-lucide="check"></i> Possui sistema Provably Fair</li>
             <li><i data-lucide="check"></i> Compatível com Chrome</li>
@@ -394,7 +447,7 @@
             <span class="platform-version"><i data-lucide="code-2"></i> csgo.net</span>
             <span class="platform-clients"><i data-lucide="users"></i> Vagas abertas</span>
           </div>
-          <p class="platform-desc">Extensão para exibir o roll e histórico do Provably Fair no CSGO.net em tempo real, facilitando a transparência com sua audiência em lives e vídeos.</p>
+          <p class="platform-desc">Extensão para exibir roll e histórico do Provably Fair no CSGO.net em tempo real, para maior transparência com a audiência.</p>
           <ul class="platform-features-mini">
             <li><i data-lucide="check"></i> Possui sistema Provably Fair</li>
             <li><i data-lucide="check"></i> Compatível com Chrome</li>
@@ -431,19 +484,26 @@
             <li><span><i data-lucide="shield"></i></span> Não envia nada para servidores externos</li>
             <li><span><i data-lucide="shield"></i></span> Não vende nem transfere dados a terceiros</li>
             <li><span><i data-lucide="shield"></i></span> Lê apenas o conteúdo da página do site (necessário para exibir o roll)</li>
-            <li><span><i data-lucide="shield"></i></span> Funciona exclusivamente no site contratado</li>
+            <li><span><i data-lucide="shield"></i></span> Funciona exclusivamente em csgo-skins.com</li>
+            <li><span><i data-lucide="shield"></i></span> Permissão mínima: apenas <code>storage</code> (sem acesso a abas, histórico ou dados do Chrome)</li>
           </ul>
           <div class="security-disclosure">
             <div class="disclosure-header">
               <i data-lucide="file-check-2"></i>
               <strong>Divulgação oficial — Chrome Web Store</strong>
             </div>
-            <p>Conforme declarado publicamente na página da extensão no Google, os únicos dados acessados são <em>conteúdo do site</em> (textos e elementos da página), usados exclusivamente para exibir o número do roll. Nenhuma das três divulgações obrigatórias do Google é violada.</p>
+            <p>Os únicos dados acessados são <em>conteúdo do site</em> (textos e elementos da página), usados exclusivamente para exibir o número do roll e calcular as odds. Nenhuma das três divulgações obrigatórias do Google é violada.</p>
           </div>
-          <a href="https://github.com/RafaelMatias1" target="_blank" rel="noopener" class="btn btn-outline" style="margin-top:1.5rem;">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;margin-right:8px;"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-            Ver perfil do desenvolvedor no GitHub
-          </a>
+          <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.5rem;">
+            <a href="https://chromewebstore.google.com/detail/GordaoDAORA%20CSGO-SKINS%20ROLLs/jogmkjgnedeflninlnahcdkglbcbkmlk" target="_blank" rel="noopener" class="btn btn-primary">
+              <i data-lucide="chrome" style="width:16px;height:16px;vertical-align:middle;margin-right:6px;"></i>
+              Ver na Chrome Web Store
+            </a>
+            <a href="https://github.com/RafaelMatias1/csgo-roll-extension" target="_blank" rel="noopener" class="btn btn-outline">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;margin-right:8px;"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              Ver código-fonte
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -467,7 +527,7 @@
         <div class="step">
           <div class="step-number">02</div>
           <h4>Receba o link</h4>
-          <p>Você recebe o link direto da Chrome Web Store para instalar a extensão no seu Chrome.</p>
+          <p>Você recebe o link direto da Chrome Web Store para instalar a extensão personalizada com sua identidade.</p>
         </div>
         <div class="step-arrow">→</div>
         <div class="step">
@@ -484,7 +544,7 @@
       </div>
       <div class="install-note reveal">
         <i data-lucide="info"></i>
-        <span>O acesso é gerenciado diretamente pelo desenvolvedor. Não é necessário configurar nada manualmente — tudo funciona pela Chrome Web Store.</span>
+        <span>O acesso é gerenciado diretamente pelo desenvolvedor via sistema de licença. Não é necessário configurar nada manualmente.</span>
       </div>
     </div>
   </section>
@@ -536,10 +596,10 @@
     <div class="container footer-inner">
       <div class="footer-logo">
         <span class="logo-icon"><i data-lucide="crosshair"></i></span>
-        <span class="logo-text">CSGO Roll Viewer</span>
+        <span class="logo-text">GordaoDAORA CSGO-SKINS ROLLs</span>
       </div>
-      <p class="footer-copy">© 2026 CSGO Roll Viewer. Desenvolvido por <a href="https://github.com/RafaelMatias1" target="_blank" rel="noopener">RafaelMatias1</a>.</p>
-      <p class="footer-disclaimer">Esta extensão não é afiliada aos sites de skin mencionados ou à Valve Corporation.</p>
+      <p class="footer-copy">© 2026 Desenvolvido por <a href="https://github.com/RafaelMatias1" target="_blank" rel="noopener">RafaelMatias1</a>.</p>
+      <p class="footer-disclaimer">Esta extensão não é afiliada à Valve Corporation nem aos sites de skin mencionados.</p>
     </div>
   </footer>
 

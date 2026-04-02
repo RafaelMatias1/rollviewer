@@ -164,17 +164,26 @@ setupStaggerGrid('.contact-links', 'reveal-up');
 })();
 
 // ================================
-// Carousel
+// Carousel (only runs if carousel track exists in DOM)
 // ================================
 (function () {
   const track = document.getElementById('carouselTrack');
+  if (!track) return;
+
   const dotsContainer = document.getElementById('carouselDots');
   const prevBtn = document.getElementById('carouselPrev');
   const nextBtn = document.getElementById('carouselNext');
-  if (!track) return;
 
   const slides = track.querySelectorAll('.carousel-slide');
   const total = slides.length;
+  if (total <= 1) {
+    // Single slide — hide controls
+    if (prevBtn) prevBtn.style.display = 'none';
+    if (nextBtn) nextBtn.style.display = 'none';
+    if (dotsContainer) dotsContainer.style.display = 'none';
+    return;
+  }
+
   let current = 0;
   let autoplayTimer = null;
 
